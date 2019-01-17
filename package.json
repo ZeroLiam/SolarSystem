@@ -41,6 +41,8 @@
   "homepage": "https://github.com/ZeroLiam/SolarSystem#readme",
   "dependencies": {
     "browserify": "^16.2.2",
+    "eslint": "^5.12.0",
+    "prettier": "^1.15.3",
     "reading-time": "^1.1.3"
   },
   "devDependencies": {
