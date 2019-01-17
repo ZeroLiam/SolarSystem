@@ -1,0 +1,52 @@
+{
+  "name": "solarsystem",
+  "version": "1.0.0",
+  "description": "Solar System in WebGL for the Computer Graphics course in Bauhaus University Winter Semester 2018-19",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify ./app/main.js -o dist/bundle.js",
+    "watch": "watchify ./app/main.js -o dist/bundle.js -v",
+    "start": "watchify -p [ browserify-livereload --host 127.0.0.1 --port 5000 ] ./app/main.js  -o dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZeroLiam/SolarSystem.git"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "keywords": [
+    "webgl",
+    "computer",
+    "graphics",
+    "solar",
+    "system"
+  ],
+  "author": "Liselot Ramirez and Rosemary Adejoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZeroLiam/SolarSystem/issues"
+  },
+  "homepage": "https://github.com/ZeroLiam/SolarSystem#readme",
+  "dependencies": {
+    "browserify": "^16.2.2",
+    "reading-time": "^1.1.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify-livereload": "^1.0.10",
+    "watchify": "^3.11.0"
+  }
+}
