@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify ./app/main.js -o dist/bundle.js",
     "watch": "watchify ./app/main.js -o dist/bundle.js -v",
-    "start": "watchify -p [ browserify-livereload --host 127.0.0.1 --port 5000 ] ./app/main.js  -o dist/bundle.js"
+    "start": "watchify -p [ browserify-livereload --host 127.0.0.1 --port 5000 ] ./app/main.js  -o dist/bundle.js",
+    "pretest": "eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
